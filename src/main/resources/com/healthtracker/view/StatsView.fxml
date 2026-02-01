@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.healthtracker.controller.StatsController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane hgap="15" vgap="10">
+        <Label text="Всего записей:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="totalRecordsLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Средний вес:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="avgWeightLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Средний сон:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="avgSleepLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Средняя вода:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="avgWaterLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Separator/>
+
+    <Label fx:id="last7DaysLabel" text=""/>
+
+    <Button text="Обновить" onAction="#onRefresh"/>
+
+</VBox>

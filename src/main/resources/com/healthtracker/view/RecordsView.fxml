@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.healthtracker.controller.RecordsController">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Поиск по дате или заметкам"/>
+        <ComboBox fx:id="quickFilterCombo" prefWidth="160"/>
+        <Button text="Очистить" onAction="#onClearSearch"/>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="dateCol" text="Дата" prefWidth="120"/>
+            <TableColumn fx:id="weightCol" text="Вес" prefWidth="100"/>
+            <TableColumn fx:id="waterCol" text="Вода" prefWidth="100"/>
+            <TableColumn fx:id="sleepCol" text="Сон" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Добавить" onAction="#onAdd"/>
+        <Button text="Редактировать" onAction="#onEdit"/>
+        <Button text="Удалить" onAction="#onDelete"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="countLabel" text="Показано: 0 / Всего: 0"/>
+    </HBox>
+
+</VBox>

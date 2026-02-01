@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.healthtracker.controller.DashboardController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Дата:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="datePicker" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Вес (кг):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="weightField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Вода (мл):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="waterMlField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Сон (часы):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="sleepHoursField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Заметки:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextArea fx:id="notesArea" prefRowCount="3"
+                  GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Заполнить по дате" onAction="#onFillFromSelectedDate"/>
+        <Button text="Добавить / обновить" onAction="#onAddOrUpdateToday"/>
+        <Button text="Быстро сохранить (Ctrl+S)" onAction="#onQuickSave"/>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="20">
+        <Label fx:id="recordsCountLabel" text="Записей: 0"/>
+        <Label fx:id="lastSavedLabel" text=""/>
+    </HBox>
+
+</VBox>

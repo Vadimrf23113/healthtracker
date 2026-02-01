@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.healthtracker.controller.RootController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Файл">
+                    <MenuItem text="Сохранить" onAction="#onSave"/>
+                    <MenuItem text="Загрузить" onAction="#onLoad"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Выход" onAction="#onExit"/>
+                </Menu>
+                <Menu text="Справка">
+                    <MenuItem text="Профиль" onAction="#onProfile"/>
+                    <MenuItem text="О программе" onAction="#onAbout"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+
+                <Tab text="Главная">
+                    <content>
+                        <fx:include source="DashboardView.fxml"/>
+                    </content>
+                </Tab>
+
+                <Tab text="Записи">
+                    <content>
+                        <fx:include source="RecordsView.fxml"/>
+                    </content>
+                </Tab>
+
+                <Tab text="Статистика">
+                    <content>
+                        <fx:include source="StatsView.fxml"/>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>

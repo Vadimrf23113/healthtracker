@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.healthtracker.controller.AboutController">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label fx:id="appNameLabel" styleClass="title"/>
+    <Label fx:id="versionLabel"/>
+    <Label fx:id="detailsLabel" wrapText="true"/>
+
+    <Button fx:id="closeButton" text="Закрыть" onAction="#onClose"/>
+
+</VBox>
