@@ -97,17 +97,21 @@ src/
 ```
 
 ## Технические требования
-Java: 17
-JavaFX: 21
-Maven: 3.8+
-Gson: 2.11.0
-ОС: Windows / macOS / Linux
+- Java: 17
+- JavaFX: 21
+- Maven: 3.8+
+- Gson: 2.11.0
+- ОС: Windows / macOS / Linux
 
 ## Авторы и роли
-Автор: Бутко Данил
-Роли: разработка архитектуры и логики приложения, UI на JavaFX (FXML), хранение данных в JSON (Gson), статистика и фильтрация записей
+- Автор: Бутко Данил
+- Роли:
+    - разработка архитектуры и логики приложения
+    - UI на JavaFX (FXML)
+    - хранение данных в JSON (Gson)
+    - статистика и фильтрация записей
 
 ## Контакты
-GitHub: https://github.com/Vadimrf23113
-Email: dandidan749@gmail.com
+- GitHub: https://github.com/Vadimrf23113
+- Email: dandidan749@gmail.com
 
